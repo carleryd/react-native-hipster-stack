@@ -1,0 +1,26 @@
+schema {
+  query: RootQueryType
+  mutation: RootMutationType
+}
+
+type Post {
+  body: String
+  id: ID
+  title: String
+}
+
+type RootMutationType {
+  createPost(body: String!, title: String!): Post
+  deletePost(id: Int!): Post
+  updatePost(id: Int!, post: UpdatePostParams): Post
+}
+
+type RootQueryType {
+  post(id: ID!): Post
+  posts: [Post]
+}
+
+input UpdatePostParams {
+  body: String!
+  title: String!
+}

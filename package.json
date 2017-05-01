@@ -1,0 +1,28 @@
+{
+  "name": "HipsterApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "relay": "relay-compiler --src ./src --schema data/schema.graphql",
+    "get-schema": "node scripts/getSchema.js"
+  },
+  "dependencies": {
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.43.4",
+    "react-relay": "dev"
+  },
+  "devDependencies": {
+    "babel-plugin-relay": "dev",
+    "graphql": "^0.9.4",
+    "jest": "19.0.2",
+    "node-fetch": "^1.6.3",
+    "react-test-renderer": "16.0.0-alpha.6",
+    "relay-compiler": "dev",
+    "sync-request": "^4.0.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
